@@ -13,6 +13,7 @@ export class GameLoop {
     this.isRunnung;
   }
 
+  // timestamp - time from the loading the page
   mainLoop = (timestamp) => {
     if (!this.isRunnung) return;
 
