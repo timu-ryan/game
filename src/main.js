@@ -1,6 +1,7 @@
 import { resources } from './Resource.js';
 import { Sprite } from './Sprite.js';
 import { Vector2 } from './Vector2.js';
+import { GameLoop } from './GameLoop.js';
 
 const canvas = document.querySelector('#game-canvas');
 const ctx = canvas.getContext("2d");
@@ -43,6 +44,10 @@ const draw = () => {
   hero.drawImage(ctx, heroPosX, heroPosY)
 }
 
-setInterval(() => {
-  draw()
-}, 300);
+const update = () => {
+  // updating entities in the game
+  
+}
+
+const gameLoop = new GameLoop(update, draw)
+gameLoop.start();
